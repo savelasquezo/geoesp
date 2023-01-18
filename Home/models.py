@@ -1,5 +1,23 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.models import AbstractUser
+
+
+class GeoUser(AbstractUser):
+
+    
+    id = models.AutoField(primary_key=True, verbose_name="ID")
+
+    username = models.CharField(_("Usuario"),max_length=64,unique=True,
+                help_text=_("Caracters Max-64, Únicamente letras, dígitos y @/./+/-/_"),
+                error_messages={"unique": _("¡Usuario Actualmente en Uso!"),},)
+
+    is_active = models.BooleanField(_(" "),default=True)
+
+    class Meta:
+        verbose_name = _("Usuario")
+        verbose_name_plural = _("Usuarios")
+
 
 class Messages(models.Model):
 

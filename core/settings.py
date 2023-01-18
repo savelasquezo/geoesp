@@ -138,3 +138,7 @@ STATICFILES_DIRS = [BASE_DIR/"Home/static"]
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# UserModel -->Conif
+AUTH_USER_MODEL = 'Home.GeoUser'
+USERNAME_FIELD = 'username'
