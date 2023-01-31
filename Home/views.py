@@ -8,6 +8,16 @@ from .models import Messages
 class Index(TemplateView):
     template_name = "index.html"
 
+class EnvironmentalView(TemplateView):
+    template_name = "environmental.html"
+
+class ExplorationView(TemplateView):
+    template_name = "exploration.html"
+    
+class DesignView(TemplateView):
+    template_name = "design.html"
+
+
 class Contact(TemplateView):
     template_name = "contact.html"
 
